@@ -9,4 +9,51 @@
 body{
     font-family: 'Lato', sans-serif;
     height: 100vh;
+    background: linear-gradient(#009688 120px, #dadbd3 0);
+}
+
+/* Main */
+.container{
+    max-width: 1500px;
+    background-color: aqua;
+    height: 100%;
+    margin: auto;
+    padding: 25px 0;
+}
+
+.main-app{
+    background-color: brown;
+    height: 100%;
+    display: flex;
+}
+
+.main-app__aside{
+    background-color: cadetblue;
+    width: 450px;
+}
+
+.main-app__core{
+    background-color: coral;
+    width: 1050px;
+}
+
+.main-app__top{
+    height: 65px;
+    background-color: #eaeaea;
+}
+
+.main-app__avatar, .main-app__buttons{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.main-app__username{
+    flex-grow: 1;
+}
+
+.main-app__photo{
+    height: 50px;
+    width: 50px;
+    background-color: crimson;
 }
