@@ -98,6 +98,7 @@ body{
     background-repeat: repeat;
     height: calc( 100% - 65px);
     display: flex;
+    flex-direction: column;
 }
 
 .write-message{
@@ -114,4 +115,38 @@ body{
     flex-grow: 1;
     margin: 0 5px;
     padding: 3px 10px;
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    height: calc( 100% - 70px);
+    padding: 50px 100px 0 100px;
+    overflow-y: auto;
+
+}
+
+.message{
+    padding: 15px 5px 5px 15px;
+    margin: 5px;
+    max-width: 320px;
+    min-width: 250px;
+    border-radius: 8px;
+}
+
+.received{
+    align-self: flex-start;
+    background-color: #fff;
+}
+
+.sent{
+    align-self: flex-end;
+    background-color: #d5f9ba;
+}
+
+.message-time{
+    font-size: 0.5rem;
+    color: #b8bfbb;
+    text-align: right;
+    margin-top: 5px;
 }
