@@ -12,6 +12,10 @@ body{
     background: linear-gradient(#009688 120px, #dadbd3 0);
 }
 
+i{
+    cursor: pointer;
+}
+
 /* Main */
 .container{
     max-width: 1500px;
@@ -28,6 +32,8 @@ body{
 .main-app__top{
     height: 65px;
     background-color: #eaeaea;
+    padding: 0 15px;
+    border-right: 1px solid #d6d6d6;
 }
 
 .main-app__avatar, .main-app__buttons{
@@ -38,12 +44,27 @@ body{
 
 .main-app__username{
     flex-grow: 1;
+    margin: 0 8px;
 }
 
-.main-app__photo{
+.main-app__photo, .notification__logo{
     height: 50px;
     width: 50px;
-    background-color: crimson;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main-app__photo img{
+    height: 100%;
+}
+
+.main-app__buttons{
+    color: #b1b1b1;
+    font-size: 1.125rem;
+}
+
+.main-app__buttons i{
+    margin-right: 13px;
 }
 
 
@@ -59,6 +80,23 @@ body{
     height: 80px;
     background-color: #8edafc;
     align-items: center;
+    padding: 0 15px;
+}
+
+.notification__logo{
+    line-height: 50px;
+    text-align: center;
+    background-color: #f2fbff;
+    color: #8edafc;
+}
+
+.notification__text{
+    margin-left: 8px;
+}
+
+.notification__text a{
+    color: #557e91;
+    font-size: 0.75rem;
 }
 
 .search{
@@ -73,6 +111,16 @@ body{
 .search input{
     flex-grow: 1;
     padding: 3px 5px;
+    border: none;
+    border-left: 1px solid #d6d6d6;
+}
+
+.search button{
+    height: 25px;
+    padding: 0 15px;
+    background-color: #fff;
+    border: none;
+    color: #b6b9bb;
 }
 
 .main-app__chat-list{
@@ -85,6 +133,7 @@ body{
     background-color: #ffffff;
     align-items: center;
     border-bottom: 1px solid #e9ebeb;
+    padding: 3px 15px;
 }
 
 /* Core App */
@@ -111,6 +160,19 @@ body{
     width: 100%;
 }
 
+.write-message i{
+    color: #6b7376;
+    margin: 0 25px;
+    padding: 0 4px;
+    font-size: 1.125rem;
+}
+
+.write-message input{
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
 .new-message{
     flex-grow: 1;
     margin: 0 5px;
@@ -132,6 +194,7 @@ body{
     max-width: 320px;
     min-width: 250px;
     border-radius: 8px;
+    font-size: 0.875rem;
 }
 
 .received{

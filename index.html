@@ -28,12 +28,14 @@
                     <!-- top section in which we show user name and profile pic -->
                     <div class="main-app__top">
                         <div class="main-app__avatar">
-                            <div class="main-app__photo"></div>
-                            <div class="main-app__username">Lorem, ipsum dolor.</div>
+                            <div class="main-app__photo">
+                                <img src="./img/avatar_io.jpg" alt="User Profile Pic">
+                            </div>
+                            <div class="main-app__username">Nome Utente</div>
                             <div class="main-app__buttons">
-                                <i class="fas fa-expand"></i>
-                                <i class="fas fa-expand"></i>
-                                <i class="fas fa-expand"></i>
+                                <i class="fas fa-circle-notch"></i>
+                                <i class="fas fa-comment-alt"></i>
+                                <i class="fas fa-ellipsis-v"></i>
                             </div>
                         </div>
                     </div>
@@ -42,18 +44,18 @@
                     <!-- Notification Alert -->
                     <div class="notification">
                         <div class="notification__logo">
-                            <div class="main-app__photo"></div>
+                            <i class="fas fa-bell-slash"></i>
                         </div>
                         <div class="notification__text">
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </div>
                     <!-- /Notification Alert -->
 
                     <!-- Search in chat -->
                     <div class="search">
-                        <i class="fas fa-expand"></i>
+                        <button><i class="fas fa-search"></i></button>
                         <input type="text" id="" placeholder="Cerca o inizia una nuova chat">
 
                     </div>
@@ -64,9 +66,12 @@
                         <ul class="chat-list">
                             <!-- TODO single instance, it has to become dynamic -->
                             <li class="chat-instance">
-                                <div class="main-app__photo"></div>
+                                <div class="main-app__photo">
+                                <img src="./img/avatar_1.jpg">
+
+                                </div>
                                 <div class="chat__text">
-                                    <div class="chat__username">Lorem</div>
+                                    <div class="chat__username">Michele</div>
                                 </div>
                             </li>
                         </ul>
@@ -82,29 +87,38 @@
                     <div class="main-app__top">
                         <!-- ToDo it has to change with selected chat -->
                         <div class="main-app__avatar">
-                            <div class="main-app__photo"></div>
-                            <div class="main-app__username">Lorem, ipsum dolor.</div>
+                            <div class="main-app__photo">
+                                <img src="./img/avatar_1.jpg">
+                            </div>
+                            <div class="main-app__username">Michele</div>
                             <div class="main-app__buttons">
-                                <i class="fas fa-expand"></i>
-                                <i class="fas fa-expand"></i>
-                                <i class="fas fa-expand"></i>
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-paperclip"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+
                             </div>
                         </div>
                     </div>
                     <!-- /top section in which we show name and profile pic of the one we're chatting with-->
 
+                    <!-- Chat section -->
                     <div class="chat">
+                        <!-- display current chat messages -->
                         <div class="messages">
                             <div class="message received"><div class="message-text">Ricevuto</div><div class="message-time">10/01/2021 15:30:55</div></div>
                             <div class="message sent"><div class="message-text">Inviato</div><div class="message-time">10/01/2021 15:30:55</div></div>
-
                         </div>
+                        <!-- /display current chat messages -->
+
+                        <!-- Where you can write yuor new message -->
                         <div class="write-message">
                             <i class="far fa-smile"></i>
                             <input type="text" placeholder="Scrivi un messaggio" class="new-message">
                             <i class="fas fa-microphone"></i>
                         </div>
+                        <!-- /Where you can write yuor new message -->
                     </div>
+                    <!-- /Chat section -->
 
                 </div>
                 <!-- /Core App -->
