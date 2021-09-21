@@ -23,7 +23,9 @@
 
         <div class="container" id="root">
             <div class="main-app">
+                <!-- Aside -->
                 <div class="main-app__aside">
+                    <!-- top section in which we show user name and profile pic -->
                     <div class="main-app__top">
                         <div class="main-app__avatar">
                             <div class="main-app__photo"></div>
@@ -33,23 +35,75 @@
                                 <i class="fas fa-expand"></i>
                                 <i class="fas fa-expand"></i>
                             </div>
+                        </div>
+                    </div>
+                    <!-- /top section in which we show user name and profile pic -->
+
+                    <!-- Notification Alert -->
+                    <div class="notification">
+                        <div class="notification__logo">
+                            <div class="main-app__photo"></div>
+                        </div>
+                        <div class="notification__text">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                        </div>
+                    </div>
+                    <!-- /Notification Alert -->
+
+                    <!-- Search in chat -->
+                    <div class="search">
+                        <i class="fas fa-expand"></i>
+                        <input type="text" id="" placeholder="Cerca o inizia una nuova chat">
+
+                    </div>
+                    <!-- /Search in chat -->
+
+                    <!-- List of all avaible chats -->
+                    <div class="main-app__chat-list">
+                        <ul class="chat-list">
+                            <!-- TODO single instance, it has to become dynamic -->
+                            <li class="chat-instance">
+                                <div class="main-app__photo"></div>
+                                <div class="chat__text">
+                                    <div class="chat__username">Lorem</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /List of all avaible chats -->
+                </div>
+                <!-- /Aside -->
+
+                <!-- Core App -->
+                <div class="main-app__core">
+
+                    <!-- top section in which we show name and profile pic of the one we're chatting with-->
+                    <div class="main-app__top">
+                        <!-- ToDo it has to change with selected chat -->
+                        <div class="main-app__avatar">
+                            <div class="main-app__photo"></div>
+                            <div class="main-app__username">Lorem, ipsum dolor.</div>
+                            <div class="main-app__buttons">
+                                <i class="fas fa-expand"></i>
+                                <i class="fas fa-expand"></i>
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /top section in which we show name and profile pic of the one we're chatting with-->
+
+                    <div class="chat">
+                        <div class="write-message">
+                            <i class="far fa-smile"></i>
+                            <input type="text" placeholder="Scrivi un messaggio" class="new-message">
+                            <i class="fas fa-microphone"></i>
                         </div>
                     </div>
 
                 </div>
-                <div class="main-app__core">
-                    <div class="main-app__top">
-                        <div class="main-app__avatar">
-                            <div class="main-app__photo"></div>
-                            <div class="main-app__username">Lorem, ipsum dolor.</div>
-                            <div class="main-app__buttons">
-                                <i class="fas fa-expand"></i>
-                                <i class="fas fa-expand"></i>
-                                <i class="fas fa-expand"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- /Core App -->
+
 
             </div>
         </div>

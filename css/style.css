@@ -15,26 +15,14 @@ body{
 /* Main */
 .container{
     max-width: 1500px;
-    background-color: aqua;
     height: 100%;
     margin: auto;
     padding: 25px 0;
 }
 
 .main-app{
-    background-color: brown;
     height: 100%;
     display: flex;
-}
-
-.main-app__aside{
-    background-color: cadetblue;
-    width: 450px;
-}
-
-.main-app__core{
-    background-color: coral;
-    width: 1050px;
 }
 
 .main-app__top{
@@ -56,4 +44,74 @@ body{
     height: 50px;
     width: 50px;
     background-color: crimson;
+}
+
+
+/* Aside */
+
+.main-app__aside{
+    background-color: #fff;
+    width: 450px;
+}
+
+.notification{
+    display: flex;
+    height: 80px;
+    background-color: #8edafc;
+    align-items: center;
+}
+
+.search{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.search input{
+    flex-grow: 1;
+    padding: 3px 5px;
+}
+
+.main-app__chat-list{
+    height: calc( 100% - 195px);
+    overflow-y: auto;
+}
+.chat-instance{
+    height: 85px;
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    border-bottom: 1px solid #e9ebeb;
+}
+
+/* Core App */
+
+.main-app__core{
+    width: 1050px;
+}
+
+.chat{
+    background-image: url("../img/mine.jpg");
+    background-repeat: repeat;
+    height: calc( 100% - 65px);
+    display: flex;
+}
+
+.write-message{
+    align-self: flex-end;
+    display: flex;
+    padding: 5px 10px;
+    background-color: #f3eeea;
+    height: 70px;
+    align-items: center;
+    width: 100%;
+}
+
+.new-message{
+    flex-grow: 1;
+    margin: 0 5px;
+    padding: 3px 10px;
 }
