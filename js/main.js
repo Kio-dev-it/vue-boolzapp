@@ -83,12 +83,13 @@ const app = new Vue ({
                 ],
             },
         ],
-        imgSrc: ""
         
     },
     methods: {
         selectAvatar: function(id){
-            this.imgSrc = "./img/avatar" + this.contacts[id].avatar + ".jpg";
+            let imgUrl = '';
+            imgUrl = "./img/avatar" + this.contacts[id].avatar + ".jpg";
+            return imgUrl;
         }
     },
     
