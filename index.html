@@ -65,7 +65,7 @@
                     <div class="main-app__chat-list">
                         <ul class="chat-list">
                             <!-- TODO single instance, it has to become dynamic -->
-                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index" :class="{ active : index == isClicked}" @click="isClicked = index, showChat()">
+                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index" :class="{ active : index == isClicked}" @click="isClicked = index">
                                 <div class="main-app__photo">
                                 <img :src="`./img/avatar${contact.avatar}.jpg`">
                                 </div>
@@ -86,11 +86,11 @@
                     <div class="main-app__top">
                         <!-- This change with selected chat -->
                         <div class="main-app__avatar">
-                            <div class="main-app__photo" v-if="chatSelected.avatar != undefined">
-                                <!-- Todo insert v-else to show a starting image before first chat selection. The image will cover the entire chat window -->
-                                <img :src="`./img/avatar${chatSelected.avatar}.jpg`">
+                            <div class="main-app__photo">
+                                <!-- TODO think a way to show a starting image before first chat selection. The image will cover the entire chat window -->
+                                <img :src="`./img/avatar${contacts[isClicked].avatar}.jpg`">
                             </div>
-                            <div class="main-app__username">{{chatSelected.name}}</div>
+                            <div class="main-app__username">{{contacts[isClicked].name}}</div>
                             <div class="main-app__buttons">
                                 <i class="fas fa-search"></i>
                                 <i class="fas fa-paperclip"></i>
@@ -105,7 +105,7 @@
                     <div class="chat">
                         <!-- display current chat messages -->
                         <div class="messages">
-                            <div class="message" v-for="txtmessage in chatSelected.messages" :class="txtmessage.status">
+                            <div class="message" v-for="txtmessage in contacts[isClicked].messages" :class="txtmessage.status">
                                 <div class="message-text">
                                     {{txtmessage.message}}
                                 </div>
@@ -119,7 +119,7 @@
                         <!-- Where you can write yuor new message -->
                         <div class="write-message">
                             <i class="far fa-smile"></i>
-                            <input type="text" placeholder="Scrivi un messaggio" class="new-message">
+                            <input type="text" placeholder="Scrivi un messaggio" class="new-message" v-model="newMessage" v-on:keyup.enter="addSentMessage(), guestAnswer()">
                             <i class="fas fa-microphone"></i>
                         </div>
                         <!-- /Where you can write yuor new message -->
@@ -132,6 +132,10 @@
 
             </div>
         </div>
+
+        <!-- Day.js -->
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+        <!-- /Day.js -->
 
         <!-- VueJS -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

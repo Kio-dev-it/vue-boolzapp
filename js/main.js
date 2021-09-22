@@ -83,13 +83,38 @@ const app = new Vue ({
                 ],
             },
         ],
-        isClicked: undefined,
-        chatSelected: {}
+        isClicked: 0,
+        newMessage: '',
     },
     methods: {
-        showChat: function(){
-            this.chatSelected = this.contacts[this.isClicked];
+        addSentMessage: function(){
+            let currentDate = dayjs().format('DD/MM/YYYY HH:mm:ss');
+            const newSentMessage = {
+                date: currentDate,
+                message: '',
+                status: 'sent'
+            }
+            if(this.newMessage != ''){
+                newSentMessage.message =  this.newMessage; 
+                this.contacts[this.isClicked].messages.push(newSentMessage);
+                this.newMessage = '';
+            }
+        },
+
+        guestAnswer: function(){
+            setTimeout(
+                ()=>{
+                    let currentDate = dayjs().format('DD/MM/YYYY HH:mm:ss');
+
+                    const newReceivedMessage = {
+                        date: currentDate,
+                        message: 'ok',
+                        status: 'received'
+                    };
+                    this.contacts[this.isClicked].messages.push(newReceivedMessage);
+                }, 1000
+            );
         }
-    }
+    } 
     
 });
