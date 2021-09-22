@@ -9,7 +9,7 @@
 body{
     font-family: 'Lato', sans-serif;
     height: 100vh;
-    background: linear-gradient(#009688 120px, #dadbd3 0);
+    background: linear-gradient(#009688 7.5rem, #dadbd3 0);
 }
 
 i{
@@ -18,10 +18,10 @@ i{
 
 /* Main */
 .container{
-    max-width: 1500px;
+    max-width: 85%;
     height: 100%;
     margin: auto;
-    padding: 25px 0;
+    padding: 1.5625rem 0;
 }
 
 .main-app{
@@ -30,10 +30,10 @@ i{
 }
 
 .main-app__top{
-    height: 65px;
+    height: 4.0625rem;
     background-color: #eaeaea;
-    padding: 0 15px;
-    border-right: 1px solid #d6d6d6;
+    padding: 0 .9375rem;
+    border-right: .0625rem solid #d6d6d6;
 }
 
 .main-app__avatar, .main-app__buttons{
@@ -44,18 +44,19 @@ i{
 
 .main-app__username{
     flex-grow: 1;
-    margin: 0 8px;
+    margin: 0 .5rem;
 }
 
 .main-app__photo, .notification__logo{
-    height: 50px;
-    width: 50px;
+    height: 3.125rem;
+    width: 3.125rem;
     border-radius: 50%;
     overflow: hidden;
 }
 
 .main-app__photo img{
     height: 100%;
+    object-fit: contain;
 }
 
 .main-app__buttons{
@@ -64,7 +65,7 @@ i{
 }
 
 .main-app__buttons i{
-    margin-right: 13px;
+    margin-right: .8125rem;
 }
 
 
@@ -72,26 +73,26 @@ i{
 
 .main-app__aside{
     background-color: #fff;
-    width: 450px;
+    width: 28.125rem;
 }
 
 .notification{
     display: flex;
-    height: 80px;
+    height: 5rem;
     background-color: #8edafc;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 .9375rem;
 }
 
 .notification__logo{
-    line-height: 50px;
+    line-height: 3.125rem;
     text-align: center;
     background-color: #f2fbff;
     color: #8edafc;
 }
 
 .notification__text{
-    margin-left: 8px;
+    margin-left: .5rem;
 }
 
 .notification__text a{
@@ -100,52 +101,53 @@ i{
 }
 
 .search{
-    height: 50px;
+    height: 3.125rem;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: .625rem;
     align-items: center;
     background-color: #fafafa;
 }
 
 .search input{
     flex-grow: 1;
-    padding: 3px 5px;
+    padding: .1875rem .3125rem;
     border: none;
-    border-left: 1px solid #d6d6d6;
+    border-left: .0625rem solid #d6d6d6;
 }
 
 .search button{
-    height: 25px;
-    padding: 0 15px;
+    height: 1.5625rem;
+    padding: 0 .9375rem;
     background-color: #fff;
     border: none;
     color: #b6b9bb;
 }
 
 .main-app__chat-list{
-    height: calc( 100% - 195px);
+    height: calc( 100% - 12.1875rem);
     overflow-y: auto;
 }
+
 .chat-instance{
-    height: 85px;
+    height: 5.3125rem;
     display: flex;
     background-color: #ffffff;
     align-items: center;
-    border-bottom: 1px solid #e9ebeb;
-    padding: 3px 15px;
+    border-bottom: .0625rem solid #e9ebeb;
+    padding: .1875rem .9375rem;
 }
 
 /* Core App */
 
 .main-app__core{
-    width: 1050px;
+    width: 65.625rem;
 }
 
 .chat{
     background-image: url("../img/mine.jpg");
     background-repeat: repeat;
-    height: calc( 100% - 65px);
+    height: calc( 100% - 4.0625rem);
     display: flex;
     flex-direction: column;
 }
@@ -153,47 +155,47 @@ i{
 .write-message{
     align-self: flex-end;
     display: flex;
-    padding: 5px 10px;
+    padding: .3125rem .625rem;
     background-color: #f3eeea;
-    height: 70px;
+    height: 4.375rem;
     align-items: center;
     width: 100%;
 }
 
 .write-message i{
     color: #6b7376;
-    margin: 0 25px;
-    padding: 0 4px;
-    font-size: 1.125rem;
+    margin: 0 1.5625rem;
+    padding: 0 .25rem;
+    font-size: 1.5rem;
 }
 
 .write-message input{
-    height: 50px;
+    height: 3.125rem;
     border: none;
-    border-radius: 10px;
+    border-radius: .625rem;
 }
 
 .new-message{
     flex-grow: 1;
-    margin: 0 5px;
-    padding: 3px 10px;
+    margin: 0 .3125rem;
+    padding: .1875rem .625rem;
 }
 
 .messages{
     display: flex;
     flex-direction: column;
-    height: calc( 100% - 70px);
-    padding: 50px 100px 0 100px;
+    height: calc( 100% - 4.375rem);
+    padding: 3.125rem 6.25rem 0 6.25rem;
     overflow-y: auto;
 
 }
 
 .message{
-    padding: 15px 5px 5px 15px;
-    margin: 5px;
-    max-width: 320px;
-    min-width: 250px;
-    border-radius: 8px;
+    padding: .9375rem .3125rem .3125rem .9375rem;
+    margin: .3125rem;
+    max-width: 49%;
+    min-width: 15.625rem;
+    border-radius: .5rem;
     font-size: 0.875rem;
 }
 
@@ -211,5 +213,5 @@ i{
     font-size: 0.5rem;
     color: #b8bfbb;
     text-align: right;
-    margin-top: 5px;
+    margin-top: .3125rem;
 }
