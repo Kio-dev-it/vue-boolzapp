@@ -231,13 +231,13 @@ i{
 .message__menu{
     position: absolute;
     right: 2%;
-    top: 85%;
+    top: 50%;
     background-color: #fff;
-    padding: .3125rem .625rem;
     z-index: 1;
 }
 
 .message__option{
-    padding: .5rem 0;
+    padding: .5rem 1rem;
+    text-align: center;
     border-bottom: 1px solid #e9ebeb;
 }
