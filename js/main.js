@@ -85,12 +85,6 @@ const app = new Vue ({
         ],
         
     },
-    methods: {
-        selectAvatar: function(id){
-            let imgUrl = '';
-            imgUrl = "./img/avatar" + this.contacts[id].avatar + ".jpg";
-            return imgUrl;
-        }
-    },
+    methods: {}
     
 });

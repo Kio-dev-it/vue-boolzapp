@@ -67,7 +67,7 @@
                             <!-- TODO single instance, it has to become dynamic -->
                             <li class="chat-instance" v-for="(contact, index) in contacts" :key="index">
                                 <div class="main-app__photo">
-                                <img :src="selectAvatar(index)">
+                                <img :src="`./img/avatar${contact.avatar}.jpg`">
                                 </div>
                                 <div class="chat__text">
                                     <div class="chat__username">{{contact.name}}</div>
