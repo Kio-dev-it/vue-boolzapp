@@ -208,6 +208,7 @@ i{
     min-width: 15.625rem;
     border-radius: .5rem;
     font-size: 0.875rem;
+    position: relative;
 }
 
 .received{
@@ -225,4 +226,18 @@ i{
     color: #b8bfbb;
     text-align: right;
     margin-top: .3125rem;
+}
+
+.message__menu{
+    position: absolute;
+    right: 2%;
+    top: 85%;
+    background-color: #fff;
+    padding: .3125rem .625rem;
+    z-index: 1;
+}
+
+.message__option{
+    padding: .5rem 0;
+    border-bottom: 1px solid #e9ebeb;
 }

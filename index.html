@@ -105,12 +105,20 @@
                     <div class="chat">
                         <!-- display current chat messages -->
                         <div class="messages">
-                            <div class="message" v-for="txtmessage in contacts[isClicked].messages" :class="txtmessage.status">
+                            <div class="message" v-for="(txtmessage, index) in contacts[isClicked].messages" :key="index" :class="txtmessage.status" @click="showMenu(index)">
                                 <div class="message-text">
                                     {{txtmessage.message}}
                                 </div>
                                 <div class="message-time">
                                     {{txtmessage.date}}
+                                </div>
+                                <div class="message__menu" v-if="messageClicked == index">
+                                    <div class="message__option">
+                                        Info messaggio
+                                    </div>
+                                    <div class="message__option" @click="removeMessage(index)">
+                                        Elimina messaggio
+                                    </div>
                                 </div>
                             </div>
                         </div>

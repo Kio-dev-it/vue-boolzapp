@@ -85,7 +85,8 @@ const app = new Vue ({
         ],
         isClicked: 0,
         newMessage: '',
-        searchInput: ''
+        searchInput: '',
+        messageClicked: undefined
     },
     methods: {
         addSentMessage: function(){
@@ -101,7 +102,6 @@ const app = new Vue ({
                 this.newMessage = '';
             }
         },
-
         guestAnswer: function(){
             setTimeout(
                 ()=>{
@@ -116,6 +116,16 @@ const app = new Vue ({
                 }, 1000
             );
         },
+        showMenu: function(messageID){
+            if (this.messageClicked == undefined){
+                this.messageClicked =  messageID;
+            } else {
+                this.messageClicked =  undefined;
+            }
+        },
+        removeMessage: function(messageID){
+            this.contacts[this.isClicked].messages.splice(messageID, 1);
+        }
     } 
     
 });
