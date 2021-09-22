@@ -116,6 +116,12 @@ const app = new Vue ({
                 }, 1000
             );
         },
+        isVisible: function(contactID){
+            if(this.searchInput != ''){
+                return this.contacts[contactID].name.toLowerCase().includes(this.searchInput.toLowerCase())
+            }
+            return true;
+        },
         showMenu: function(messageID){
             if (this.messageClicked == undefined){
                 this.messageClicked =  messageID;
@@ -126,6 +132,7 @@ const app = new Vue ({
         removeMessage: function(messageID){
             this.contacts[this.isClicked].messages.splice(messageID, 1);
         }
+        
     } 
     
 });

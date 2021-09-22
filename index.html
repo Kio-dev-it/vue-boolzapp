@@ -65,7 +65,7 @@
                     <div class="main-app__chat-list">
                         <ul class="chat-list">
                             <!-- TODO single instance, it has to become dynamic -->
-                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index" :class="{ active : index == isClicked}" @click="isClicked = index" v-show="contact.name.toLowerCase().includes(searchInput.toLowerCase())">
+                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index" :class="{ active : index == isClicked}" @click="isClicked = index" v-show="isVisible(index)">
                                 <div class="main-app__photo">
                                 <img :src="`./img/avatar${contact.avatar}.jpg`">
                                 </div>
