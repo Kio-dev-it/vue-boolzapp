@@ -83,8 +83,13 @@ const app = new Vue ({
                 ],
             },
         ],
-        
+        isClicked: undefined,
+        chatSelected: {}
     },
-    methods: {}
+    methods: {
+        showChat: function(){
+            this.chatSelected = this.contacts[this.isClicked];
+        }
+    }
     
 });

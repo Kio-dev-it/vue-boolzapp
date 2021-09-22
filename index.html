@@ -65,7 +65,7 @@
                     <div class="main-app__chat-list">
                         <ul class="chat-list">
                             <!-- TODO single instance, it has to become dynamic -->
-                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index">
+                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index" :class="{ active : index == isClicked}" @click="isClicked = index, showChat()">
                                 <div class="main-app__photo">
                                 <img :src="`./img/avatar${contact.avatar}.jpg`">
                                 </div>
@@ -84,12 +84,13 @@
 
                     <!-- top section in which we show name and profile pic of the one we're chatting with-->
                     <div class="main-app__top">
-                        <!-- ToDo it has to change with selected chat -->
+                        <!-- This change with selected chat -->
                         <div class="main-app__avatar">
-                            <div class="main-app__photo">
-                                <img src="./img/avatar_1.jpg">
+                            <div class="main-app__photo" v-if="chatSelected.avatar != undefined">
+                                <!-- Todo insert v-else to show a starting image before first chat selection. The image will cover the entire chat window -->
+                                <img :src="`./img/avatar${chatSelected.avatar}.jpg`">
                             </div>
-                            <div class="main-app__username">Michele</div>
+                            <div class="main-app__username">{{chatSelected.name}}</div>
                             <div class="main-app__buttons">
                                 <i class="fas fa-search"></i>
                                 <i class="fas fa-paperclip"></i>
@@ -104,20 +105,12 @@
                     <div class="chat">
                         <!-- display current chat messages -->
                         <div class="messages">
-                            <div class="message received">
+                            <div class="message" v-for="txtmessage in chatSelected.messages" :class="txtmessage.status">
                                 <div class="message-text">
-                                    Ricevuto
+                                    {{txtmessage.message}}
                                 </div>
                                 <div class="message-time">
-                                    10/01/2021 15:30:55
-                                </div>
-                            </div>
-                            <div class="message sent">
-                                <div class="message-text">
-                                    Inviato
-                                </div>
-                                <div class="message-time">
-                                    10/01/2021 15:30:55
+                                    {{txtmessage.date}}
                                 </div>
                             </div>
                         </div>

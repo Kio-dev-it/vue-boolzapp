@@ -138,6 +138,11 @@ i{
     padding: .1875rem .9375rem;
 }
 
+.chat-instance.active{
+    background-color: #e9ebeb;
+}
+
+
 /* Core App */
 
 .main-app__core{
