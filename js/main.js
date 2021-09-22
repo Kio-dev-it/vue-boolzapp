@@ -85,6 +85,7 @@ const app = new Vue ({
         ],
         isClicked: 0,
         newMessage: '',
+        searchInput: ''
     },
     methods: {
         addSentMessage: function(){
@@ -114,7 +115,7 @@ const app = new Vue ({
                     this.contacts[this.isClicked].messages.push(newReceivedMessage);
                 }, 1000
             );
-        }
+        },
     } 
     
 });
