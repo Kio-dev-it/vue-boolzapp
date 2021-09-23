@@ -22,7 +22,9 @@
     <body>
 
         <div class="container" id="root">
+            <!-- Main App -->
             <div class="main-app">
+                
                 <!-- Aside -->
                 <div class="main-app__aside">
                     <!-- top section in which we show user name and profile pic -->
@@ -56,8 +58,9 @@
                     <!-- Search in chat -->
                     <div class="search">
                         <button><i class="fas fa-search"></i></button>
-                        <input type="text" id="" placeholder="Cerca o inizia una nuova chat" v-model="searchInput" @input="isVisible">
-
+                        <input type="text" id="" placeholder="Cerca o inizia una nuova chat" 
+                            v-model="searchInput" 
+                            @input="isVisible">
                     </div>
                     <!-- /Search in chat -->
 
@@ -65,17 +68,25 @@
                     <div class="main-app__chat-list">
                         <ul class="chat-list">
                             <!-- TODO single instance, it has to become dynamic -->
-                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index" :class="{ active : index == isClicked}" @click="isClicked = index" v-show="contact.visible">
+                            <li class="chat-instance" 
+                                v-for="(contact, index) in contacts" 
+                                :key="index" 
+                                :class="{ active : index == isClicked }" 
+                                @click="isClicked = index" 
+                                v-show="contact.visible">
                                 <div class="main-app__photo">
-                                <img :src="`./img/avatar${contact.avatar}.jpg`">
+                                    <img :src="`./img/avatar${contact.avatar}.jpg`" :alt="`${contact.name} Profile Pic`">
                                 </div>
                                 <div class="chat__text">
-                                    <div class="chat__username">{{contact.name}}</div>
+                                    <div class="chat__username">
+                                        {{contact.name}}
+                                    </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <!-- /List of all avaible chats -->
+                
                 </div>
                 <!-- /Aside -->
 
@@ -90,12 +101,13 @@
                                 <!-- TODO think a way to show a starting image before first chat selection. The image will cover the entire chat window -->
                                 <img :src="`./img/avatar${contacts[isClicked].avatar}.jpg`">
                             </div>
-                            <div class="main-app__username">{{contacts[isClicked].name}}</div>
+                            <div class="main-app__username">
+                                {{contacts[isClicked].name}}
+                            </div>
                             <div class="main-app__buttons">
                                 <i class="fas fa-search"></i>
                                 <i class="fas fa-paperclip"></i>
                                 <i class="fas fa-ellipsis-v"></i>
-
                             </div>
                         </div>
                     </div>
@@ -103,11 +115,13 @@
 
                     <!-- Chat section -->
                     <div class="chat">
+                        
                         <!-- display current chat messages -->
                         <div class="messages">
-                            <div class="message" v-for="(txtmessage, index) in contacts[isClicked].messages" 
-                                :key="index" 
+                            <div class="message" 
                                 :class="txtmessage.status" 
+                                v-for="(txtmessage, index) in contacts[isClicked].messages" 
+                                :key="index" 
                                 @click="showMenu(index)"
                                 @mouseleave="messageClicked = undefined">
                                 <div class="message-text">
@@ -127,22 +141,25 @@
                             </div>
                         </div>
                         <!-- /display current chat messages -->
-
-                        <!-- Where you can write yuor new message -->
+    
+                        <!-- Where you can write your new message -->
                         <div class="write-message">
                             <i class="far fa-smile"></i>
-                            <input type="text" placeholder="Scrivi un messaggio" class="new-message" v-model="newMessage" v-on:keyup.enter="addSentMessage(), guestAnswer()">
+                            <input type="text" placeholder="Scrivi un messaggio" 
+                                class="new-message" 
+                                v-model="newMessage" 
+                                v-on:keyup.enter="addSentMessage(), guestAnswer()">
                             <i class="fas fa-microphone"></i>
                         </div>
                         <!-- /Where you can write yuor new message -->
                     </div>
                     <!-- /Chat section -->
-
                 </div>
                 <!-- /Core App -->
 
-
             </div>
+            <!-- /Main App -->
+
         </div>
 
         <!-- Day.js -->
@@ -152,6 +169,7 @@
         <!-- VueJS -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <!-- /VueJS -->
+
         <script src="./js/main.js"></script>
         
     </body>

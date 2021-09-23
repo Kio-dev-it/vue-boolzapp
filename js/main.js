@@ -89,24 +89,23 @@ const app = new Vue ({
         messageClicked: undefined
     },
     methods: {
-        addSentMessage: function(){
+        addSentMessage: function() {
             let currentDate = dayjs().format('DD/MM/YYYY HH:mm:ss');
             const newSentMessage = {
                 date: currentDate,
                 message: '',
                 status: 'sent'
             }
-            if(this.newMessage != ''){
+            if(this.newMessage != '') {
                 newSentMessage.message =  this.newMessage; 
                 this.contacts[this.isClicked].messages.push(newSentMessage);
                 this.newMessage = '';
             }
         },
-        guestAnswer: function(){
+        guestAnswer: function() {
             setTimeout(
-                ()=>{
+                () => {
                     let currentDate = dayjs().format('DD/MM/YYYY HH:mm:ss');
-
                     const newReceivedMessage = {
                         date: currentDate,
                         message: 'ok',
@@ -116,20 +115,20 @@ const app = new Vue ({
                 }, 1000
             );
         },
-        isVisible: function(){
+        isVisible: function() {
                 this.contacts.forEach((elm, index) => {
                     elm.visible = elm.name.toLowerCase().includes(this.searchInput.toLowerCase())
                 }
                 );
         },
-        showMenu: function(messageID){
-            if (this.messageClicked == undefined){
+        showMenu: function(messageID) {
+            if (this.messageClicked == undefined) {
                 this.messageClicked =  messageID;
             } else {
                 this.messageClicked =  undefined;
             }
         },
-        removeMessage: function(messageID){
+        removeMessage: function(messageID) {
             this.contacts[this.isClicked].messages.splice(messageID, 1);
         }
         

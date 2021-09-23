@@ -1,22 +1,28 @@
 /* Reset */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 /* Common */
+
 body{
     font-family: 'Lato', sans-serif;
     height: 100vh;
     background: linear-gradient(#009688 7.5rem, #dadbd3 0);
+    cursor: default;
 }
 
 i{
     cursor: pointer;
 }
 
+
 /* Main */
+
 .container{
     max-width: 85%;
     height: 100%;
@@ -37,7 +43,8 @@ i{
     border-right: .0625rem solid #d6d6d6;
 }
 
-.main-app__avatar, .main-app__buttons{
+.main-app__avatar,
+.main-app__buttons{
     display: flex;
     align-items: center;
     height: 100%;
@@ -48,7 +55,8 @@ i{
     margin: 0 .5rem;
 }
 
-.main-app__photo, .notification__logo{
+.main-app__photo,
+.notification__logo{
     height: 3.125rem;
     width: 3.125rem;
     border-radius: 50%;
@@ -164,35 +172,6 @@ i{
     flex-direction: column;
 }
 
-.write-message{
-    align-self: flex-end;
-    display: flex;
-    padding: .3125rem .625rem;
-    background-color: #f3eeea;
-    height: 4.375rem;
-    align-items: center;
-    width: 100%;
-}
-
-.write-message i{
-    color: #6b7376;
-    margin: 0 1.5625rem;
-    padding: 0 .25rem;
-    font-size: 1.5rem;
-}
-
-.write-message input{
-    height: 3.125rem;
-    border: none;
-    border-radius: .625rem;
-}
-
-.new-message{
-    flex-grow: 1;
-    margin: 0 .3125rem;
-    padding: .1875rem .625rem;
-}
-
 .messages{
     display: flex;
     flex-direction: column;
@@ -243,4 +222,30 @@ i{
     padding: .5rem 1rem;
     text-align: center;
     border-bottom: 1px solid #e9ebeb;
+}
+
+.write-message{
+    align-self: flex-end;
+    display: flex;
+    padding: .3125rem .625rem;
+    background-color: #f3eeea;
+    height: 4.375rem;
+    align-items: center;
+    width: 100%;
+}
+
+.write-message i{
+    color: #6b7376;
+    margin: 0 1.5625rem;
+    padding: 0 .25rem;
+    font-size: 1.5rem;
+}
+
+.new-message{
+    height: 3.125rem;
+    border: none;
+    border-radius: .625rem;
+    flex-grow: 1;
+    margin: 0 .3125rem;
+    padding: .1875rem .625rem;
 }
