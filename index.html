@@ -56,7 +56,7 @@
                     <!-- Search in chat -->
                     <div class="search">
                         <button><i class="fas fa-search"></i></button>
-                        <input type="text" id="" placeholder="Cerca o inizia una nuova chat" v-model="searchInput">
+                        <input type="text" id="" placeholder="Cerca o inizia una nuova chat" v-model="searchInput" @input="isVisible">
 
                     </div>
                     <!-- /Search in chat -->
@@ -65,7 +65,7 @@
                     <div class="main-app__chat-list">
                         <ul class="chat-list">
                             <!-- TODO single instance, it has to become dynamic -->
-                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index" :class="{ active : index == isClicked}" @click="isClicked = index" v-show="isVisible(index)">
+                            <li class="chat-instance" v-for="(contact, index) in contacts" :key="index" :class="{ active : index == isClicked}" @click="isClicked = index" v-show="contact.visible">
                                 <div class="main-app__photo">
                                 <img :src="`./img/avatar${contact.avatar}.jpg`">
                                 </div>
@@ -105,7 +105,11 @@
                     <div class="chat">
                         <!-- display current chat messages -->
                         <div class="messages">
-                            <div class="message" v-for="(txtmessage, index) in contacts[isClicked].messages" :key="index" :class="txtmessage.status" @click="showMenu(index)">
+                            <div class="message" v-for="(txtmessage, index) in contacts[isClicked].messages" 
+                                :key="index" 
+                                :class="txtmessage.status" 
+                                @click="showMenu(index)"
+                                @mouseleave="messageClicked = undefined">
                                 <div class="message-text">
                                     {{txtmessage.message}}
                                 </div>

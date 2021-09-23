@@ -27,6 +27,7 @@ i{
 .main-app{
     height: 100%;
     display: flex;
+    box-shadow: .0625rem .0625rem .3125rem rgba(0,0,0,0.3);
 }
 
 .main-app__top{
@@ -209,6 +210,7 @@ i{
     border-radius: .5rem;
     font-size: 0.875rem;
     position: relative;
+    box-shadow: .0625rem .0625rem .3125rem rgba(0,0,0,0.3);
 }
 
 .received{
@@ -234,7 +236,8 @@ i{
     top: 50%;
     background-color: #fff;
     z-index: 1;
-}
+    border-radius: .1875rem;
+    box-shadow: .0625rem .0625rem .3125rem rgba(0,0,0,0.3)}
 
 .message__option{
     padding: .5rem 1rem;

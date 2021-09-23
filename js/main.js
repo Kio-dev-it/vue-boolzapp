@@ -116,11 +116,11 @@ const app = new Vue ({
                 }, 1000
             );
         },
-        isVisible: function(contactID){
-            if(this.searchInput != ''){
-                return this.contacts[contactID].name.toLowerCase().includes(this.searchInput.toLowerCase())
-            }
-            return true;
+        isVisible: function(){
+                this.contacts.forEach((elm, index) => {
+                    elm.visible = elm.name.toLowerCase().includes(this.searchInput.toLowerCase())
+                }
+                );
         },
         showMenu: function(messageID){
             if (this.messageClicked == undefined){
