@@ -135,3 +135,8 @@ const app = new Vue ({
     } 
     
 });
+
+
+// Per lo scroll della chat
+
+//https://www.npmjs.com/package/vue-chat-scroll 

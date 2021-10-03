@@ -82,7 +82,8 @@ i{
 
 .main-app__aside{
     background-color: #fff;
-    width: 28.125rem;
+    min-width: 26rem;
+    width: 30%;
 }
 
 .notification{
@@ -161,7 +162,8 @@ i{
 /* Core App */
 
 .main-app__core{
-    width: 65.625rem;
+    min-width: 50rem;
+    width: 70%;
 }
 
 .chat{
