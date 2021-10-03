@@ -275,3 +275,21 @@ i{
     margin: 0 .3125rem;
     padding: .1875rem .625rem;
 }
+
+/* Responsive Desktop first */
+
+@media screen and (max-width: 1400px) {
+    .container{
+        max-width: 100%;
+        padding: 0;
+    }    
+}
+
+@media screen and (max-width: 1250px) {
+    .main-app__aside{
+        min-width: 20rem;
+    }
+    .main-app__core{
+        min-width: 40.625rem;
+    }
+}
