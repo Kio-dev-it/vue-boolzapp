@@ -20,6 +20,30 @@ i{
     cursor: pointer;
 }
 
+/* ScrollBar */
+
+/* width */
+::-webkit-scrollbar {
+    width: .375rem;
+    }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0.699); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a3a2a2; 
+    border-radius: 5px;
+    }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #8a8989; 
+    }
+
+
 
 /* Main */
 
